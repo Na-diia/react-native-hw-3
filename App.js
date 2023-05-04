@@ -1,4 +1,5 @@
 import  React, {useState} from 'react';
+import { useFonts } from 'expo-font';
 import { StatusBar} from 'expo-status-bar';
 import { StyleSheet, 
         ImageBackground,
@@ -12,6 +13,15 @@ import  LoginScreen from './src/Screens/LoginScreen';
 
 export default function App() {
   const [activeScreen, setActiveScreen] = useState(0);
+
+  const [fontsLoaded] = useFonts({
+    'Roboto-Regular': require('./assets/fonts/Roboto-Regular.ttf'),
+    'Roboto-Medium' : require('./assets/fonts/Roboto-Medium.ttf')
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  };
   
   const changeScreen = (value) => {
     setActiveScreen(value);

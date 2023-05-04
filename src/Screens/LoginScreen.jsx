@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
         fontWeight: "500",
         marginTop: 32,
         marginBottom: 32,
+        fontFamily: 'Roboto-Medium',
     },
     email: {
         backgroundColor: "#F6F6F6",
@@ -131,6 +132,7 @@ const styles = StyleSheet.create({
         marginBottom: 46,
     },
     linkText: {
+        fontFamily: 'Roboto-Regular',
         fontSize: 16,
         lineHeight: 19,
         color: "#1B4371",
